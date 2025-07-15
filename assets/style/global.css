@@ -1,0 +1,190 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+  /* Colors */
+  --color-primary: #FF385C; /* Main brand color  */
+  --color-gray-light: #DDDDDD; /* Light gray for borders and separators */
+  --color-gray-medium: #717171; /* Medium gray for regular text */
+  --color-gray-dark: #222222; /* Dark gray for headings and prominent text */
+  --color-black: #000000; /* Deep black */
+  --color-white: #FFFFFF; /* Pure white background */
+
+  /* Fonts */
+  
+  --font-family-base: 'Plus Jakarta Sans', sans-serif; 
+  --font-family-headings: 'Plus Jakarta Sans', sans-serif; 
+
+  /* Spacing */
+  --spacing-unit: 8px; /* Base unit for padding, margin, etc. */
+
+  /* Font Sizes */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-md: 1rem;       /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.5rem;     /* 24px */
+  --font-size-xxl: 2rem;      /* 32px */
+
+  /* Border Radii */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+
+  /* Shadows */
+  --shadow-sm: 0 0px 15px rgba(0, 0, 0, 0.08); /* Light, subtle shadow */
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.15); /* More pronounced shadow for hover */
+}
+
+
+* {
+  box-sizing: border-box; /* Ensures padding and border don't increase element size */
+}
+
+html, body {
+  height: 100%; /* for full-height layouts */
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: 1.5; /* Standard line height */
+  color: var(--color-gray-medium);
+  margin: 0; /* Reset default body margin */
+  background-color: var(--color-white);
+}
+
+/* --- Headings --- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-headings);
+  font-weight: 600; /* Semi-bold for headings */
+  color: var(--color-gray-dark); /* Darker color for prominence */
+  margin-top: calc(2 * var(--spacing-unit)); /* Double base spacing unit */
+  margin-bottom: var(--spacing-unit);
+}
+
+h1 { font-size: var(--font-size-xxl); }
+h2 { font-size: var(--font-size-xl); }
+h3 { font-size: var(--font-size-lg); }
+h4 { font-size: var(--font-size-md); }
+/* Add more heading sizes if needed (h5, h6) */
+
+/* --- Links --- */
+a {
+  color: var(--color-gray-dark);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--color-black);
+  text-decoration: underline; /* Subtle hover effect */
+}
+
+/* --- Primary Buttons --- */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--spacing-unit) calc(2 * var(--spacing-unit));
+  border: none;
+  border-radius: var(--border-radius-md);
+  font-family: var(--font-family-base);
+  font-weight: 600;
+  font-size: var(--font-size-md);
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+}
+
+.btn-primary:hover {
+  opacity: 0.95; 
+
+}
+
+.btn-primary:active {
+  opacity: 0.85; 
+}
+
+/* --- Secondary Buttons --- */
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-gray-dark);
+  padding: var(--spacing-unit) calc(1.5 * var(--spacing-unit));
+  border: 1px solid var(--color-gray-light);
+  border-radius: var(--border-radius-md);
+  font-family: var(--font-family-base);
+  font-weight: 600;
+  font-size: var(--font-size-md);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  min-height: 48px;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-gray-light);
+  border-color: var(--color-gray-medium);
+}
+
+/* --- Content Cards --- */
+.card {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-lg); 
+  overflow: hidden; 
+  box-shadow: var(--shadow-sm); 
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  display: flex; 
+  flex-direction: column; 
+}
+
+.card:hover {
+  transform: translateY(-4px); 
+  box-shadow: var(--shadow-md); 
+}
+
+.card-image {
+  width: 100%;
+  height: 250px; 
+  object-fit: cover; 
+  border-radius: var(--border-radius-md); 
+  margin-bottom: var(--spacing-unit);
+}
+
+.card-content {
+  padding: var(--spacing-unit) calc(1.5 * var(--spacing-unit));
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; 
+}
+
+.card-title {
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  color: var(--color-gray-dark);
+  margin-bottom: calc(0.5 * var(--spacing-unit));
+}
+
+.card-description {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-medium);
+  margin-bottom: calc(0.5 * var(--spacing-unit));
+}
+
+.card-price {
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  color: var(--color-gray-dark);
+  margin-top: auto; 
+}
+
+/* --- Basic CSS Grid Layout  --- */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: calc(3 * var(--spacing-unit)); 
+  padding: calc(4 * var(--spacing-unit));
+  max-width: 1440px; 
+  margin: 0 auto; 
+}
