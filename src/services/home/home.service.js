@@ -1,8 +1,6 @@
-import { storageService } from '../async-storage.service'
-import { utilService } from '../util.service'
+import { storageService } from "../async-storage.service"
+import { utilService } from "../util.service"
 //import { userService } from '../user'
-
-
 
 export const homeService = {
   query,
@@ -84,6 +82,9 @@ function getEmptyHome() {
     description: "",
     price: getRandomIntInclusive(100, 1000),
     capacity: getRandomIntInclusive(1, 10),
+    rooms: getRandomIntInclusive(1, 5),
+    beds: getRandomIntInclusive(1, 5),
+    bathrooms: getRandomIntInclusive(1, 5),
     type: "apartment",
     imgUrls: [],
     location: {
@@ -126,6 +127,9 @@ function _createHomes() {
         description: "בית כפרי עם גינה ונוף לשדות ירוקים",
         price: 450,
         capacity: 4,
+        rooms: 3,
+        beds: 3,
+        bathrooms: 2,
         type: "house",
         imgUrls: [],
         location: {
@@ -146,6 +150,9 @@ function _createHomes() {
         description: "לופט מודרני במרכז העיר עם מטבח מאובזר",
         price: 600,
         capacity: 3,
+        rooms: 4,
+        beds: 5,
+        bathrooms: 2,
         type: "loft",
         imgUrls: [],
         location: {
@@ -166,6 +173,9 @@ function _createHomes() {
         description: "כיפת מגורים אקולוגית בלב המדבר",
         price: 390,
         capacity: 2,
+        rooms: 2,
+        beds: 1,
+        bathrooms: 1,
         type: "dome",
         imgUrls: [],
         location: {
@@ -186,6 +196,9 @@ function _createHomes() {
         description: "קוטג' קסום על שפת אגם עם קיאקים",
         price: 500,
         capacity: 5,
+        rooms: 2,
+        beds: 3,
+        bathrooms: 1,
         type: "cabin",
         imgUrls: [],
         location: {
@@ -206,6 +219,9 @@ function _createHomes() {
         description: "בית עץ גבוה בין עצים ונוף עוצר נשימה",
         price: 420,
         capacity: 2,
+        rooms: 2,
+        beds: 1,
+        bathrooms: 1,
         type: "treehouse",
         imgUrls: [],
         location: {
@@ -226,6 +242,9 @@ function _createHomes() {
         description: "צ'לט סקי חמימי ליד המסלולים",
         price: 750,
         capacity: 6,
+        rooms: 3,
+        beds: 4,
+        bathrooms: 3,
         type: "chalet",
         imgUrls: [],
         location: {
@@ -246,6 +265,9 @@ function _createHomes() {
         description: "דירה היסטורית בעיר העתיקה עם תקרות גבוהות",
         price: 540,
         capacity: 3,
+        rooms: 2,
+        beds: 2,
+        bathrooms: 2,
         type: "apartment",
         imgUrls: [],
         location: {
@@ -266,6 +288,9 @@ function _createHomes() {
         description: "סטודיו עם מרפסת גג במרכז תל אביב",
         price: 460,
         capacity: 2,
+        rooms: 1,
+        beds: 1,
+        bathrooms: 1,
         type: "studio",
         imgUrls: [],
         location: {
@@ -286,6 +311,9 @@ function _createHomes() {
         description: "דירה יפהפייה עם נוף לתעלות של אמסטרדם",
         price: 690,
         capacity: 4,
+        rooms: 4,
+        beds: 3,
+        bathrooms: 2,
         type: "apartment",
         imgUrls: [],
         location: {
@@ -306,6 +334,9 @@ function _createHomes() {
         description: "בונגלו פרטי בתוך הג'ונגל עם מקלחת חוץ",
         price: 370,
         capacity: 2,
+        rooms: 1,
+        beds: 1,
+        bathrooms: 1,
         type: "bungalow",
         imgUrls: [],
         location: {
@@ -326,6 +357,9 @@ function _createHomes() {
         description: "דירה מקסימה ליד סנטרל פארק עם מטבח מאובזר",
         price: 720,
         capacity: 4,
+        rooms: 3,
+        beds: 3,
+        bathrooms: 3,
         type: "apartment",
         imgUrls: [],
         location: {
@@ -346,6 +380,9 @@ function _createHomes() {
         description: "לופט תעשייתי משופץ בוויליאמסבורג",
         price: 680,
         capacity: 3,
+        rooms: 2,
+        beds: 2,
+        bathrooms: 1,
         type: "loft",
         imgUrls: [],
         location: {
@@ -366,6 +403,9 @@ function _createHomes() {
         description: "סטודיו קומפקטי בלב מנהטן, דקות הליכה מטיימס סקוור",
         price: 580,
         capacity: 2,
+        rooms: 1,
+        beds: 1,
+        bathrooms: 1,
         type: "studio",
         imgUrls: [],
         location: {
@@ -386,6 +426,9 @@ function _createHomes() {
         description: "דירה בבית ברונסטון קלאסי בהארלם",
         price: 490,
         capacity: 4,
+        rooms: 3,
+        beds: 3,
+        bathrooms: 2,
         type: "house",
         imgUrls: [],
         location: {
@@ -406,6 +449,9 @@ function _createHomes() {
         description: "לופט רחב ידיים באזור הטרנדי של סוהו",
         price: 850,
         capacity: 5,
+        rooms: 3,
+        beds: 3,
+        bathrooms: 4,
         type: "loft",
         imgUrls: [],
         location: {
@@ -426,6 +472,9 @@ function _createHomes() {
         description: "סטודיו מעוצב ברחוב שינקין השוקק",
         price: 490,
         capacity: 2,
+        rooms: 1,
+        beds: 1,
+        bathrooms: 1,
         type: "studio",
         imgUrls: [],
         location: {
@@ -446,6 +495,9 @@ function _createHomes() {
         description: "דירת יוקרה בלב שכונת נווה צדק ההיסטורית",
         price: 880,
         capacity: 4,
+        rooms: 3,
+        beds: 2,
+        bathrooms: 2,
         type: "apartment",
         imgUrls: [],
         location: {
@@ -466,6 +518,9 @@ function _createHomes() {
         description: "לופט עם מרפסת גג פרטית ברחוב דיזנגוף",
         price: 720,
         capacity: 3,
+        rooms: 2,
+        beds: 2,
+        bathrooms: 2,
         type: "loft",
         imgUrls: [],
         location: {
@@ -486,6 +541,9 @@ function _createHomes() {
         description: "דירה מרווחת למשפחה בצפון הישן של תל אביב",
         price: 650,
         capacity: 5,
+        rooms: 4,
+        beds: 4,
+        bathrooms: 4,
         type: "apartment",
         imgUrls: [],
         location: {
@@ -506,6 +564,9 @@ function _createHomes() {
         description: "דירת סטודיו מודרנית בשכונת פלורנטין היצירתית",
         price: 430,
         capacity: 2,
+        rooms: 1,
+        beds: 1,
+        bathrooms: 2,
         type: "studio",
         imgUrls: [],
         location: {

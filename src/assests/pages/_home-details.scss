@@ -1,0 +1,18 @@
+.home-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.gallery {
+  width: 100%;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+.side-panel {
+  position: sticky;
+  top: 100px;
+}
