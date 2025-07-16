@@ -8,7 +8,7 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 export function App() {
     return (
         <div className="main-container"> 
-        <p>app</p>
+        <h1>App</h1>
         </div>
     )
 }
