@@ -133,7 +133,7 @@ function _createHomes() {
         beds: 3,
         bathrooms: 2,
         type: "house",
-        imgUrls: [],
+        imgUrls: [`/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`],
         location: {
           country: "UK",
           city: "Cotswolds",
@@ -156,7 +156,7 @@ function _createHomes() {
         beds: 5,
         bathrooms: 2,
         type: "loft",
-        imgUrls: [],
+        imgUrls: [`/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`],
         location: {
           country: "Germany",
           city: "Berlin",
@@ -179,7 +179,7 @@ function _createHomes() {
         beds: 1,
         bathrooms: 1,
         type: "dome",
-        imgUrls: [],
+        imgUrls: [`/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`],
         location: {
           country: "Israel",
           city: "Mitzpe Ramon",
@@ -202,7 +202,7 @@ function _createHomes() {
         beds: 3,
         bathrooms: 1,
         type: "cabin",
-        imgUrls: [],
+        imgUrls: [`/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`],
         location: {
           country: "Canada",
           city: "Muskoka",
@@ -225,7 +225,7 @@ function _createHomes() {
         beds: 1,
         bathrooms: 1,
         type: "treehouse",
-        imgUrls: [],
+        imgUrls: [`/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`],
         location: {
           country: "USA",
           city: "Atlanta",
@@ -248,7 +248,7 @@ function _createHomes() {
         beds: 4,
         bathrooms: 3,
         type: "chalet",
-        imgUrls: [],
+        imgUrls: [`/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`],
         location: {
           country: "Switzerland",
           city: "Zermatt",
@@ -271,7 +271,7 @@ function _createHomes() {
         beds: 2,
         bathrooms: 2,
         type: "apartment",
-        imgUrls: [],
+        imgUrls: [`/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`],
         location: {
           country: "Spain",
           city: "Barcelona",
@@ -294,7 +294,7 @@ function _createHomes() {
         beds: 1,
         bathrooms: 1,
         type: "studio",
-        imgUrls: [],
+        imgUrls: [`/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`],
         location: {
           country: "Israel",
           city: "Tel Aviv",
@@ -317,7 +317,7 @@ function _createHomes() {
         beds: 3,
         bathrooms: 2,
         type: "apartment",
-        imgUrls: [],
+        imgUrls: [`/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`],
         location: {
           country: "Netherlands",
           city: "Amsterdam",
@@ -340,7 +340,7 @@ function _createHomes() {
         beds: 1,
         bathrooms: 1,
         type: "bungalow",
-        imgUrls: [],
+        imgUrls: [`/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`],
         location: {
           country: "Costa Rica",
           city: "Puerto Viejo",
@@ -363,7 +363,7 @@ function _createHomes() {
         beds: 3,
         bathrooms: 3,
         type: "apartment",
-        imgUrls: [],
+        imgUrls: [`/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`],
         location: {
           country: "USA",
           city: "New York",
@@ -386,7 +386,7 @@ function _createHomes() {
         beds: 2,
         bathrooms: 1,
         type: "loft",
-        imgUrls: [],
+        imgUrls: [`/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`],
         location: {
           country: "USA",
           city: "New York",
@@ -409,7 +409,7 @@ function _createHomes() {
         beds: 1,
         bathrooms: 1,
         type: "studio",
-        imgUrls: [],
+        imgUrls: [`/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`],
         location: {
           country: "USA",
           city: "New York",
@@ -432,7 +432,7 @@ function _createHomes() {
         beds: 3,
         bathrooms: 2,
         type: "house",
-        imgUrls: [],
+        imgUrls: [`/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`],
         location: {
           country: "USA",
           city: "New York",
@@ -455,7 +455,7 @@ function _createHomes() {
         beds: 3,
         bathrooms: 4,
         type: "loft",
-        imgUrls: [],
+        imgUrls: [`/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`],
         location: {
           country: "USA",
           city: "New York",
@@ -478,7 +478,7 @@ function _createHomes() {
         beds: 1,
         bathrooms: 1,
         type: "studio",
-        imgUrls: [],
+        imgUrls: [`/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`],
         location: {
           country: "Israel",
           city: "Tel Aviv",
@@ -501,7 +501,7 @@ function _createHomes() {
         beds: 2,
         bathrooms: 2,
         type: "apartment",
-        imgUrls: [],
+        imgUrls: [`/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`],
         location: {
           country: "Israel",
           city: "Tel Aviv",
@@ -524,7 +524,7 @@ function _createHomes() {
         beds: 2,
         bathrooms: 2,
         type: "loft",
-        imgUrls: [],
+        imgUrls: [`/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`],
         location: {
           country: "Israel",
           city: "Tel Aviv",
@@ -547,7 +547,7 @@ function _createHomes() {
         beds: 4,
         bathrooms: 4,
         type: "apartment",
-        imgUrls: [],
+        imgUrls: [`/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`],
         location: {
           country: "Israel",
           city: "Tel Aviv",
@@ -570,7 +570,7 @@ function _createHomes() {
         beds: 1,
         bathrooms: 2,
         type: "studio",
-        imgUrls: [],
+        imgUrls: [`/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`],
         location: {
           country: "Israel",
           city: "Tel Aviv",
