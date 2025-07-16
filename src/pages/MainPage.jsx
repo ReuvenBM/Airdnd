@@ -3,14 +3,13 @@ import { useEffect } from "react"
 import { loadHomes } from "../store/home/home.action"
 import { showSuccessMsg, showErrorMsg } from "../services/event-bus.service"
 
-export function HomeIndex() {
+export function MainPage() {
   const homes = useSelector((storeState) => storeState.homeModule.home)
-
-  const filterBy = null
+  const filterBy = null //will add later
 
   useEffect(() => {
     loadHomes()
   }, [filterBy])
 
-  return <p>HomeIndex</p>
+  return <p>MainPage</p>
 }
