@@ -1,16 +1,12 @@
 //import { legacy_createStore as createStore, combineReducers } from 'redux'
-import {configureStore} from '@reduxjs/toolkit'
-import { homeReducer } from './home.reducer'
-
+import { configureStore } from "@reduxjs/toolkit"
+import { homeReducer } from "./home/home.reducer"
 
 export const store = configureStore({
-    reducer:{
-        homeModule: homeReducer,
-    }
-
+  reducer: {
+    homeModule: homeReducer,
+  },
 })
-
-
 
 // For debug:
 // store.subscribe(() => {
@@ -18,6 +14,3 @@ export const store = configureStore({
 //     console.log('storeState:\n', store.getState())
 //     console.log('*******************************')
 // })
-
-
-

@@ -1,5 +1,5 @@
-//import { homeService } from '../services/home'
-import { store } from '../store/store'
+import { homeService } from '../../services/home/home.service'
+import { store } from '../store'
 import { ADD_HOME, REMOVE_HOME, SET_HOMES, SET_HOME, UPDATE_HOME, ADD_HOME_MSG } from './home.reducer'
 
 export async function loadHomes(filterBy) {
@@ -12,15 +12,6 @@ export async function loadHomes(filterBy) {
     }
 }
 
-export async function loadHome(homeId) {
-    try {
-        const home = await homeService.getById(homeId)
-        store.dispatch(getCmdSetHome(home))
-    } catch (err) {
-        console.log('Cannot load home', err)
-        throw err
-    }
-}
 
 
 export async function removeHome(homeId) {
@@ -104,14 +95,3 @@ function getCmdAddHomeMsg(msg) {
     }
 }
 
-// unitTestActions()
-async function unitTestActions() {
-    await loadHomes()
-    await addHome(homeService.getEmptyHome())
-    await updateHome({
-        _id: 'm1oC7',
-        title: 'Home-Good',
-    })
-    await removeHome('m1oC7')
-    // TODO unit test addHomeMsg
-}

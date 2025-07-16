@@ -7,7 +7,6 @@ export const ADD_HOME_MSG = 'ADD_HOME_MSG'
 
 const initialState = {
     homes: [],
-    home: null
 }
 
 export function homeReducer(state = initialState, action) {
@@ -40,30 +39,5 @@ export function homeReducer(state = initialState, action) {
     return newState
 }
 
-// unitTestReducer()
 
-function unitTestReducer() {
-    var state = initialState
-    const home1 = { _id: 'b101', vendor: 'Home ' + parseInt(Math.random() * 10), msgs: [] }
-    const home2 = { _id: 'b102', vendor: 'Home ' + parseInt(Math.random() * 10), msgs: [] }
-
-    state = homeReducer(state, { type: SET_HOMES, homes: [home1] })
-    console.log('After SET_HOMES:', state)
-
-    state = homeReducer(state, { type: ADD_HOME, home: home2 })
-    console.log('After ADD_HOME:', state)
-
-    state = homeReducer(state, { type: UPDATE_HOME, home: { ...home2, vendor: 'Good' } })
-    console.log('After UPDATE_HOME:', state)
-
-    state = homeReducer(state, { type: REMOVE_HOME, homeId: home2._id })
-    console.log('After REMOVE_HOME:', state)
-
-    const msg = { id: 'm' + parseInt(Math.random() * 100), txt: 'Some msg' }
-    state = homeReducer(state, { type: ADD_HOME_MSG, homeId: home1._id, msg })
-    console.log('After ADD_HOME_MSG:', state)
-
-    state = homeReducer(state, { type: REMOVE_HOME, homeId: home1._id })
-    console.log('After REMOVE_HOME:', state)
-}
 
