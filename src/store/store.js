@@ -1,20 +1,16 @@
-import { legacy_createStore as createStore, combineReducers } from 'redux'
-
+//import { legacy_createStore as createStore, combineReducers } from 'redux'
+import {configureStore} from '@reduxjs/toolkit'
 import { homeReducer } from './home.reducer'
-import { userReducer } from './user.reducer'
-import { reviewReducer } from './review.reducer'
-import { systemReducer } from './system.reducer'
 
-const rootReducer = combineReducers({
-    homeModule: homeReducer,
-    userModule: userReducer,
-    systemModule: systemReducer,
-    reviewModule: reviewReducer,
+
+export const store = configureStore({
+    reducer:{
+        homeModule: homeReducer,
+    }
+
 })
 
 
-const middleware = (window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__() : undefined
-export const store = createStore(rootReducer, middleware)
 
 // For debug:
 // store.subscribe(() => {
