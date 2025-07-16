@@ -43,13 +43,15 @@ async function query(filterBy = { txt: "", maxPrice: 0 }) {
     })
   }
 
-  return homes.map(({ _id, title, price, capacity, location }) => ({
-    _id,
-    title,
-    price,
-    capacity,
-    location,
-  }))
+  return homes
+
+  // return homes.map(({ _id, title, price, capacity, location }) => ({
+  //   _id,
+  //   title,
+  //   price,
+  //   capacity,
+  //   location,
+  // }))
 }
 
 function getById(homeId) {

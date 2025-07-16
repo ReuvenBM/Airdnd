@@ -5,13 +5,14 @@ import { ADD_HOME, REMOVE_HOME, SET_HOMES, SET_HOME, UPDATE_HOME, ADD_HOME_MSG }
 export async function loadHomes(filterBy) {
     try {
         const homes = await homeService.query(filterBy)
+        console.log('homes11111111111111', homes);
+        
         store.dispatch(getCmdSetHomes(homes))
     } catch (err) {
         console.log('Cannot load homes', err)
         throw err
     }
 }
-
 
 
 export async function removeHome(homeId) {

@@ -3,18 +3,23 @@ import { useEffect, useState } from "react"
 import { loadHomes } from "../store/home/home.action"
 import { showSuccessMsg, showErrorMsg } from "../services/event-bus.service"
 import { getFormattedDateRange } from "../services/home/home.service"
+import { HomeList } from "../cmps/HomeList.jsx"
 import arrow1 from "../../public/icons/arrow1.svg"
 const dateRange = getFormattedDateRange() // returns something like "Jul 15–17"
 
 export function MainPage() {
-  const homes = useSelector((storeState) => storeState.homeModule.home)
-  const [city, setCity] = useState("")
-  const filterBy = null //will add later
+  const homes = useSelector((storeState) => storeState.homeModule.homes)
+  const filterBy = {} //will add later
 
   useEffect(() => {
-    loadHomes()
-
-  }, [])
+    loadHomes(filterBy)
+            .then(homes => {
+                showSuccessMsg('Load homes successfully')
+            })
+            .catch(err => {
+                showErrorMsg('Cannot load homes')
+            })
+    }, [])
 
   return (
     <div className="main-page">
@@ -28,23 +33,33 @@ export function MainPage() {
 
       <div className="text-with-icon">
         Available for similar dates
-        <img src={arrow1} alt="Arrow icon" className="arrow-icon" />      </div>
+        <img src={arrow1} alt="Arrow icon" className="arrow-icon" />
+        <HomeList homes={homes} />
+      </div>
 
       <div className="text-with-icon">
         Stay in Aegina
-        <img src={arrow1} alt="Arrow icon" className="arrow-icon" />      </div>
+        <img src={arrow1} alt="Arrow icon" className="arrow-icon" />
+        <HomeList homes={homes} />
+      </div>
 
       <div className="text-with-icon">
         Popular homes in Lavreotiki
-        <img src={arrow1} alt="Arrow icon" className="arrow-icon" />      </div>
+        <img src={arrow1} alt="Arrow icon" className="arrow-icon" />
+        <HomeList homes={homes} />
+      </div>
 
       <div className="text-with-icon">
         Guests also checked out Glyfada
-        <img src={arrow1} alt="Arrow icon" className="arrow-icon" />      </div>
+        <img src={arrow1} alt="Arrow icon" className="arrow-icon" />
+        <HomeList homes={homes} />
+      </div>
 
       <div className="text-with-icon">
         Homes in Markopoulo Mesogaias
-        <img src={arrow1} alt="Arrow icon" className="arrow-icon" />      </div>
+        <img src={arrow1} alt="Arrow icon" className="arrow-icon" />
+        <HomeList homes={homes} />
+      </div>
       <hr />
     </div>
 
