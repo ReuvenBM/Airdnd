@@ -1,0 +1,45 @@
+// /*  Basics */
+
+
+/* Pages */
+@use "./pages/main-page.scss";
+
+// /* Components */
+
+
+
+.bottom-div {
+    height: 0px;
+    width: 100vw;
+}
+
+.team-member-list {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.team-member-preview {
+    height: 80px;
+    display: flex;
+    padding: 1.5em;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #673ab721;
+}
+
+.loading-container {
+    height: 100px;
+    font-weight: bolder;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.loading-container img {
+    height: 100%;
+    z-index: 100;
+}

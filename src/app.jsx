@@ -5,6 +5,7 @@ import {AppFooter} from './cmps/AppFooter'
 import { MainPage } from "./pages/MainPage"
 import { HomeDetails } from "./pages/HomeDetails"
 import {UserMsg} from './cmps/UserMsg'
+import './assests/pages/main-page.scss'
 
 export function App() {
   return (

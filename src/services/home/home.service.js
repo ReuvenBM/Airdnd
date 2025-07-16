@@ -10,6 +10,7 @@ export const homeService = {
   save,
   remove,
   getEmptyHome,
+  getFormattedDateRange,
 }
 window.hs = homeService
 
@@ -98,6 +99,21 @@ function getEmptyHome() {
     unavailableDates: [],
     createdAt: Date.now(),
   }
+}
+
+export function getFormattedDateRange(offsetDays = 2) {
+  const today = new Date()
+  const futureDate = new Date()
+  futureDate.setDate(today.getDate() + offsetDays)
+
+  const optionsMonth = { month: "short" }
+  const optionsDay = { day: "numeric" }
+
+  const month = today.toLocaleDateString("en-US", optionsMonth)
+  const startDay = today.toLocaleDateString("en-US", optionsDay)
+  const endDay = futureDate.toLocaleDateString("en-US", optionsDay)
+
+  return `${month} ${startDay}–${endDay}`
 }
 
 function _createHomes() {
