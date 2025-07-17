@@ -1,14 +1,26 @@
-/*  Basics */
+// Setup
+@import "./setup/variables" ; 
+@import "./setup/functions" ;
+@import "./setup/mixins" ;
+@import "./setup/typography" ;
 
-/* Pages */
-@use "./pages/main-page";
-@use "./pages/home-details";
+
+// Base
+@import "./base/base" ;
+@import "./base/layout";
 
 
-/* Components */
-@use "./cmps/header";
-@use "./cmps/home-preview";
-@use "./cmps/home-list";
+
+// Pages
+@import "./pages/main-page";
+@import "./pages/home-details";
+
+
+// Components
+@import "./cmps/header";
+@import "./cmps/home-preview";
+@import "./cmps/home-list";
+@import './cmps/home-carousel';
 
 
 

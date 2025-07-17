@@ -6,11 +6,11 @@ import { MainPage } from "./pages/MainPage"
 import { HomeDetails } from "./pages/HomeDetails"
 import { HomeList } from "./cmps/HomeList"
 import {UserMsg} from './cmps/UserMsg'
-import './assests/css/main.scss'
+
 
 export function App() {
   return (
-    <section className="app">
+    <section className="main-container">
       <Router>
         <AppHeader />
         <main className="container">

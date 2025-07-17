@@ -5,7 +5,6 @@ import { useSelector } from "react-redux"
 
 export function HomeList() {
     const homes = useSelector((storeState) => storeState.homeModule.homes)
-    console.log('homes111111111111', homes)
     const [startIdx, setStartIdx] = useState(0);
     const itemsPerPage = 4; // Number of homes to show at once
     const total = homes.length;
