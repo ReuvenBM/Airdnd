@@ -10,38 +10,6 @@
     cursor: pointer;
 }
 
-.home-preview .info {
-    padding: 10px;
-    flex-grow: 1;
-}
-
-/* Unified actions bar */
-.home-preview .actions {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    margin-top: 10px;
-    font-size: 0.95rem;
-}
-
-.home-preview .actions a {
-    color: #0077cc;
-    text-decoration: none;
-}
-
-.home-preview .actions button {
-    background: none;
-    border: none;
-    color: red;
-    cursor: pointer;
-    font-size: 1rem;
-    padding: 0;
-}
-
-.home-preview .actions button:hover {
-    color: darkred;
-}
-
 .home-preview:hover .actions {
     transform: translateY(0); /* keep this if you use animation elsewhere */
 }
