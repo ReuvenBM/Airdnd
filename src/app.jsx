@@ -2,7 +2,7 @@ import React from "react"
 import { HashRouter as Router, Routes, Route } from "react-router-dom"
 import { AppHeader } from "./cmps/AppHeader"
 import { AppFooter } from './cmps/AppFooter'
-import { MainPage } from "./pages/MainPage"
+import { HomePage } from "./pages/HomePage"
 import { HomeDetails } from "./pages/HomeDetails"
 import { HomeList } from "./cmps/HomeList"
 import { UserMsg } from './cmps/UserMsg'
@@ -15,7 +15,7 @@ export function App() {
         <AppHeader />
         <main className="container">
           <Routes>
-            <Route path="/" element={<MainPage />} />
+            <Route path="/" element={<HomePage />} />
             <Route path="/home/:homeId" element={<HomeDetails />} />
             <Route path="/list" element={<HomeList />} />
           </Routes>
