@@ -1,11 +1,11 @@
 import React from "react"
 import { HashRouter as Router, Routes, Route } from "react-router-dom"
 import { AppHeader } from "./cmps/AppHeader"
-import {AppFooter} from './cmps/AppFooter'
+import { AppFooter } from './cmps/AppFooter'
 import { MainPage } from "./pages/MainPage"
 import { HomeDetails } from "./pages/HomeDetails"
 import { HomeList } from "./cmps/HomeList"
-import {UserMsg} from './cmps/UserMsg'
+import { UserMsg } from './cmps/UserMsg'
 
 
 export function App() {

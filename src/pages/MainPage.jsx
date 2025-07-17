@@ -9,16 +9,13 @@ import { Link } from "react-router-dom"
 const dateRange = getFormattedDateRange() // returns something like "Jul 15–17"
 
 export function MainPage() {
-  const homes = useSelector((storeState) => storeState.homeModule.homes)
   const filterBy = {} //will add later
 
   useEffect(() => {
     loadHomes(filterBy)
-      .then(homes => {
-        showSuccessMsg('Load homes successfully')
-      })
       .catch(err => {
-        showErrorMsg('Cannot load homes')
+        // showErrorMsg('Cannot load homes')
+        // redirect to error page or render error component
       })
   }, [])
 
