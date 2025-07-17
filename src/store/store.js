@@ -1,6 +1,6 @@
 //import { legacy_createStore as createStore, combineReducers } from 'redux'
 import { configureStore } from "@reduxjs/toolkit"
-import { homeReducer } from "./home/home.reducer"
+import { homeReducer } from "./home/homes.reducer"
 
 export const store = configureStore({
   reducer: {

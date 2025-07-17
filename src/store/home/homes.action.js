@@ -1,6 +1,6 @@
 import { homeService } from '../../services/home/home.service'
 import { store } from '../store'
-import { ADD_HOME, REMOVE_HOME, SET_HOMES, SET_HOME, UPDATE_HOME, ADD_HOME_MSG } from './home.reducer'
+import { ADD_HOME, REMOVE_HOME, SET_HOMES, SET_HOME, UPDATE_HOME, ADD_HOME_MSG } from './homes.reducer'
 
 export async function loadHomes(filterBy) {
     try {
