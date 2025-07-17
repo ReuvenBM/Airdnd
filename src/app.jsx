@@ -4,6 +4,7 @@ import { AppHeader } from "./cmps/AppHeader"
 import {AppFooter} from './cmps/AppFooter'
 import { MainPage } from "./pages/MainPage"
 import { HomeDetails } from "./pages/HomeDetails"
+import { HomeList } from "./cmps/HomeList"
 import {UserMsg} from './cmps/UserMsg'
 import './assests/css/main.scss'
 
@@ -16,6 +17,7 @@ export function App() {
           <Routes>
             <Route path="/" element={<MainPage />} />
             <Route path="/home/:homeId" element={<HomeDetails />} />
+            <Route path="/list" element={<HomeList />} />
           </Routes>
         </main>
         <AppFooter />
