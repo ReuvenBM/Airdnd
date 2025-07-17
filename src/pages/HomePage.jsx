@@ -1,9 +1,9 @@
 import { useSelector } from "react-redux"
 import { useEffect, useState } from "react"
-import { loadHomes } from "../store/home/home.action"
-import { showSuccessMsg, showErrorMsg } from "../services/event-bus.service"
-import { getFormattedDateRange } from "../services/home/home.service"
-import { HomeList } from "../cmps/HomeList.jsx"
+import { loadHomes } from "../store/home/home.action.js"
+import { showSuccessMsg, showErrorMsg } from "../services/event-bus.service.js"
+import { getFormattedDateRange } from "../services/home/home.service.js"
+import { HomesList } from "../cmps/HomesList.jsx"
 import arrow1 from "../../public/icons/arrow1.svg"
 import { Link } from "react-router-dom"
 const dateRange = getFormattedDateRange() // returns something like "Jul 15–17"
@@ -34,7 +34,7 @@ export function HomePage() {
           Available for similar dates
           <img src={arrow1} alt="Arrow icon" className="arrow-icon" />
         </Link>
-        <HomeList />
+        <HomesList />
       </div>
 
       <div className="text-with-icon">
@@ -42,7 +42,7 @@ export function HomePage() {
           Stay in Aegina
           <img src={arrow1} alt="Arrow icon" className="arrow-icon" />
         </Link>
-        <HomeList />
+        <HomesList />
       </div>
 
       <div className="text-with-icon">
@@ -50,7 +50,7 @@ export function HomePage() {
           Popular homes in Lavreotiki
           <img src={arrow1} alt="Arrow icon" className="arrow-icon" />
         </Link>
-        <HomeList />
+        <HomesList />
       </div>
 
       <div className="text-with-icon">
@@ -58,7 +58,7 @@ export function HomePage() {
           Guests also checked out Glyfada
           <img src={arrow1} alt="Arrow icon" className="arrow-icon" />
         </Link>
-        <HomeList />
+        <HomesList />
       </div>
 
       <div className="text-with-icon">
@@ -66,7 +66,7 @@ export function HomePage() {
           Homes in Markopoulo Mesogaias
           <img src={arrow1} alt="Arrow icon" className="arrow-icon" />
         </Link>
-        <HomeList />
+        <HomesList />
       </div>
       <hr />
     </div>
