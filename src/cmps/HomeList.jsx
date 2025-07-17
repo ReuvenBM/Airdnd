@@ -8,12 +8,13 @@ export function HomeList({ homes }) {
     const total = homes.length;
 
     const next = () => {
-        setStartIdx((prev) => Math.min(prev + itemsPerPage, total - itemsPerPage));
+        setStartIdx((prev) => Math.min(prev + 1, total - itemsPerPage));
     };
 
     const prev = () => {
-        setStartIdx((prev) => Math.max(prev - itemsPerPage, 0));
+        setStartIdx((prev) => Math.max(prev - 1, 0));
     };
+
 
     const visibleHomes = homes.slice(startIdx, startIdx + itemsPerPage);
 
