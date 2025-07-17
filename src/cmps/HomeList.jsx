@@ -32,7 +32,7 @@ export function HomeList() {
                 {visibleHomes.map(home => (
                     <li className="home-preview" key={home._id}>
                         <Link to={`/home/${home._id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-                            <HomePreview />
+                            <HomePreview home={home} />
                         </Link>
                     </li>
                 ))}
