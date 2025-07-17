@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { HomePreview } from "./HomePreview.jsx";
 import { Link } from 'react-router-dom'
+import { useSelector } from "react-redux"
 
-export function HomeList({ homes }) {
+export function HomeList() {
+    const homes = useSelector((storeState) => storeState.homeModule.homes)
+    console.log('homes111111111111', homes)
     const [startIdx, setStartIdx] = useState(0);
     const itemsPerPage = 4; // Number of homes to show at once
     const total = homes.length;
@@ -29,7 +32,7 @@ export function HomeList({ homes }) {
                 {visibleHomes.map(home => (
                     <li className="home-preview" key={home._id}>
                         <Link to={`/home/${home._id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-                            <HomePreview home={home} />
+                            <HomePreview />
                         </Link>
                     </li>
                 ))}

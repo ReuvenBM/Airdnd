@@ -37,7 +37,7 @@ export function MainPage() {
           Available for similar dates
           <img src={arrow1} alt="Arrow icon" className="arrow-icon" />
         </Link>
-        <HomeList homes={homes} />
+        <HomeList />
       </div>
 
       <div className="text-with-icon">
@@ -45,7 +45,7 @@ export function MainPage() {
           Stay in Aegina
           <img src={arrow1} alt="Arrow icon" className="arrow-icon" />
         </Link>
-        <HomeList homes={homes} />
+        <HomeList />
       </div>
 
       <div className="text-with-icon">
@@ -53,7 +53,7 @@ export function MainPage() {
           Popular homes in Lavreotiki
           <img src={arrow1} alt="Arrow icon" className="arrow-icon" />
         </Link>
-        <HomeList homes={homes} />
+        <HomeList />
       </div>
 
       <div className="text-with-icon">
@@ -61,7 +61,7 @@ export function MainPage() {
           Guests also checked out Glyfada
           <img src={arrow1} alt="Arrow icon" className="arrow-icon" />
         </Link>
-        <HomeList homes={homes} />
+        <HomeList />
       </div>
 
       <div className="text-with-icon">
@@ -69,7 +69,7 @@ export function MainPage() {
           Homes in Markopoulo Mesogaias
           <img src={arrow1} alt="Arrow icon" className="arrow-icon" />
         </Link>
-        <HomeList homes={homes} />
+        <HomeList />
       </div>
       <hr />
     </div>
