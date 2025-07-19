@@ -3,10 +3,10 @@ import { HomePreview } from "./HomePreview.jsx";
 import { Link } from 'react-router-dom'
 import { useSelector } from "react-redux"
 
-export function HomeList() {
+export function HomesList() {
     const homes = useSelector((storeState) => storeState.homeModule.homes)
     const [startIdx, setStartIdx] = useState(0);
-    const itemsPerPage = 4; // Number of homes to show at once
+    const itemsPerPage = 8; // Number of homes to show at once
     const total = homes.length;
 
     const next = () => {

@@ -6,22 +6,13 @@ import { useSelector } from "react-redux"
 
 export function HomePreview({ home }) {
     const dateRange = getFormattedDateRange() // returns something like "Jul 15–17"
-    const base = '/Airdnd';
-    const imgUrl = base + home.imgUrls[0];
-    const textStyle = {
-        color: '#333',
-        textDecoration: 'none',
-        textDecorationLine: 'none',
-        WebkitTextDecoration: 'none',
-        MozTextDecoration: 'none'
-    };
-    return (
+        return (
         <article className="home-preview">
-            <img src={imgUrl} alt={home.title} />
-            <h4 style={textStyle}>{home.title}</h4>
-            <p style={textStyle}>{dateRange}</p>
-            <p style={textStyle}>{home.price}₪ for 1 night</p>
-            <p style={{ ...textStyle, display: 'flex', alignItems: 'center', gap: '4px' }}>
+            <img src={home.imgUrls[0]} alt={home.title} />
+            <h4 >{home.title}</h4>
+            <p >{dateRange}</p>
+            <p >{home.price}₪ for 1 night</p>
+            <p >
                 <FaStar className="star-icon" />
                 {home.rating}
             </p>
