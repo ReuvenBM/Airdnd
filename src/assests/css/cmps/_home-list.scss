@@ -1,20 +1,88 @@
 .home-list {
   display: flex;
-  gap: 20px;
+  gap: 15px;
   list-style: none;
   padding: 0;
-  margin: 0 auto;
-  max-width: 1200px;
+  margin: 0;
   overflow-x: auto;
   scroll-behavior: smooth;
 
-  .home-actions {
+   > .home-preview {
+    flex: 0 1 14%; // flex-grow:0, shrink:1, basis:14%
+    min-width: 140px; // won't get smaller than this
+    max-width: 180px; // won't get bigger than this
+  }
+}
+
+.home-preview {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  cursor: pointer;
+  font-family: "Segoe UI", sans-serif;
+
+  p {
+    color: $text-gray;
+    font-size: rem(12px);
+    font-weight: 450;
+  }
+
+  h4 {
+    color: $text-dark;
+    font-size: rem(14px);
+    font-weight: 500;
+  }
+
+  img {
+    width: 100%;           // fill the container width
+    aspect-ratio: 1 / 1;   // square image
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  &:hover .actions {
+    transform: translateY(0);
+  }
+
+  .rating {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-basis: 25%;
-    padding: 10px;
-    background-color: rgba($clr-black, 0.79);
-    transition: transform 0.2s;
+    gap: 6px;
+    font-size: rem(16px);
+    margin-top: 8px;
+
+    .star-icon {
+      color: $clr-yellow;
+    }
   }
+}
+.home-carousel {
+  overflow: hidden; // or keep overflow-x auto if you want scrolling
+}
+
+
+.home-carousel-header {
+  position: absolute;
+  top: -30px; // negative to move above carousel
+  right: 0;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.home-carousel-header button {
+  width: 36px;
+  height: 36px;
+  font-size: 20px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.9);
+  cursor: pointer;
+}
+
+.home-carousel-wrapper {
+  position: relative;  // this is the relative container for arrows
+  max-width: 1200px;
+  margin: 0 auto;
 }

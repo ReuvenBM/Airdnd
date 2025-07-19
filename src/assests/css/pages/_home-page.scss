@@ -1,0 +1,51 @@
+.text-with-icon-carousel {
+  display: flex;
+  align-items: center;
+  gap: 1rem; // space between title and carousel
+  margin-bottom: 2rem;
+}
+
+.text-with-icon-carousel > a {
+  flex-shrink: 0;   // prevents the link from shrinking too much
+  display: flex;    // to keep text and icon aligned nicely
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.arrow-icon {
+  height: 12px;
+  width: 12px;
+}
+
+.section-wrapper {
+  margin-bottom: 2rem;
+}
+
+.text-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 640;
+  font-size: 1.35rem;
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .arrow-icon {
+    width: 1rem;
+    height: auto;
+  }
+
+  &.small {
+    font-size: 0.875rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+}
