@@ -8,7 +8,7 @@ export function HomePreview({ home }) {
     const dateRange = getFormattedDateRange() // returns something like "Jul 15–17"
     return (
         <article className="home-preview">
-            <div className="img-wrapper">
+            <div className="img-container">
                 <img src={home.imgUrls[0]} alt={home.title} />
                 {home.guestFavorite && (
                     <img src={heart} alt="Heart icon" className="heart-icon" />
