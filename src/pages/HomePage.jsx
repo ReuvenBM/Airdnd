@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux"
 import { useEffect, useState } from "react"
-import { loadHomes } from "../store/home/homes.action.js"
+import { loadHomes } from "../store/homes/homes.action.js"
 import { getFormattedDateRange } from "../services/home/home.service.js"
 import { HomesList } from "../cmps/HomesList.jsx"
 import arrow1 from "../../public/icons/arrow1.svg"
