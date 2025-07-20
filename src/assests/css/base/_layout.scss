@@ -31,8 +31,8 @@
 
   // מסכים רחבים (TV/4K)
   @include for-wide-layout {
-    grid-template-columns: 1fr minmax(auto, 1200px) 1fr;
-
+    grid-template-columns: 1fr minmax(auto, 1350px) 1fr;
+  
     > * {
       grid-column: 2;
     }

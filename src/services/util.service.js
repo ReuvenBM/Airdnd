@@ -70,13 +70,16 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min //The maximum is inclusive and the minimum is inclusive
 }
 
-function getRandomRating() {
-  const rand = Math.random()
-  if (rand < 0.05) return +(Math.random() * 3.5).toFixed(2)        // 0 - 3.5
-  if (rand < 0.2) return +(3.5 + Math.random() * 1).toFixed(2)     // 3.5 - 4.5
-  return +(4.5 + Math.random() * 0.5).toFixed(2)                   // 4.5 - 5
+function getRandomGuestFavorite() {
+  return Math.random() < 0.4 // 40% chance to return true
 }
 
+function getRandomRating() {
+  const rand = Math.random()
+  if (rand < 0.05) return +(Math.random() * 3.5).toFixed(2) // 0 - 3.5
+  if (rand < 0.2) return +(3.5 + Math.random() * 1).toFixed(2) // 3.5 - 4.5
+  return +(4.5 + Math.random() * 0.5).toFixed(2) // 4.5 - 5
+}
 
 function randomPastTime() {
   const HOUR = 1000 * 60 * 60
@@ -106,12 +109,12 @@ function loadFromStorage(key) {
   return data ? JSON.parse(data) : undefined
 }
 export function getExistingProperties(obj) {
-    const truthyObj = {}
-    for (const key in obj) {
-        const val = obj[key]
-        if (val || typeof val === 'boolean') {
-            truthyObj[key] = val
-        }
+  const truthyObj = {}
+  for (const key in obj) {
+    const val = obj[key]
+    if (val || typeof val === "boolean") {
+      truthyObj[key] = val
     }
-    return truthyObj
+  }
+  return truthyObj
 }

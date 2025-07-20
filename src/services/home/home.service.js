@@ -112,6 +112,8 @@ function getEmptyHome() {
     bathrooms: getRandomIntInclusive(1, 5),
     type: "apartment",
     imgUrls: [],
+    rating: 0,
+    guestFavorite: false,
     location: {
       country: "",
       city: "",
@@ -160,6 +162,7 @@ function _createHomes() {
           `/Airdnd/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`,
         ],
         rating: utilService.getRandomRating(),
+        guestFavorite: utilService.getRandomGuestFavorite(),
         location: {
           country: "UK",
           city: "Cotswolds",
@@ -186,6 +189,7 @@ function _createHomes() {
           `/Airdnd/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`,
         ],
         rating: utilService.getRandomRating(),
+        guestFavorite: utilService.getRandomGuestFavorite(),
         location: {
           country: "Germany",
           city: "Berlin",
@@ -212,6 +216,7 @@ function _createHomes() {
           `/Airdnd/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`,
         ],
         rating: utilService.getRandomRating(),
+        guestFavorite: utilService.getRandomGuestFavorite(),
         location: {
           country: "Israel",
           city: "Mitzpe Ramon",
@@ -238,6 +243,7 @@ function _createHomes() {
           `/Airdnd/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`,
         ],
         rating: utilService.getRandomRating(),
+        guestFavorite: utilService.getRandomGuestFavorite(),
         location: {
           country: "Canada",
           city: "Muskoka",
@@ -264,6 +270,7 @@ function _createHomes() {
           `/Airdnd/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`,
         ],
         rating: utilService.getRandomRating(),
+        guestFavorite: utilService.getRandomGuestFavorite(),
         location: {
           country: "USA",
           city: "Atlanta",
@@ -290,6 +297,7 @@ function _createHomes() {
           `/Airdnd/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`,
         ],
         rating: utilService.getRandomRating(),
+        guestFavorite: utilService.getRandomGuestFavorite(),
         location: {
           country: "Switzerland",
           city: "Zermatt",
@@ -316,6 +324,7 @@ function _createHomes() {
           `/Airdnd/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`,
         ],
         rating: utilService.getRandomRating(),
+        guestFavorite: utilService.getRandomGuestFavorite(),
         location: {
           country: "Spain",
           city: "Barcelona",
@@ -342,6 +351,7 @@ function _createHomes() {
           `/Airdnd/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`,
         ],
         rating: utilService.getRandomRating(),
+        guestFavorite: utilService.getRandomGuestFavorite(),
         location: {
           country: "Israel",
           city: "Tel Aviv",
@@ -368,6 +378,7 @@ function _createHomes() {
           `/Airdnd/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`,
         ],
         rating: utilService.getRandomRating(),
+        guestFavorite: utilService.getRandomGuestFavorite(),
         location: {
           country: "Netherlands",
           city: "Amsterdam",
@@ -394,6 +405,7 @@ function _createHomes() {
           `/Airdnd/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`,
         ],
         rating: utilService.getRandomRating(),
+        guestFavorite: utilService.getRandomGuestFavorite(),
         location: {
           country: "Costa Rica",
           city: "Puerto Viejo",
@@ -420,6 +432,7 @@ function _createHomes() {
           `/Airdnd/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`,
         ],
         rating: utilService.getRandomRating(),
+        guestFavorite: utilService.getRandomGuestFavorite(),
         location: {
           country: "USA",
           city: "New York",
@@ -446,6 +459,7 @@ function _createHomes() {
           `/Airdnd/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`,
         ],
         rating: utilService.getRandomRating(),
+        guestFavorite: utilService.getRandomGuestFavorite(),
         location: {
           country: "USA",
           city: "New York",
@@ -472,6 +486,7 @@ function _createHomes() {
           `/Airdnd/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`,
         ],
         rating: utilService.getRandomRating(),
+        guestFavorite: utilService.getRandomGuestFavorite(),
         location: {
           country: "USA",
           city: "New York",
@@ -498,6 +513,7 @@ function _createHomes() {
           `/Airdnd/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`,
         ],
         rating: utilService.getRandomRating(),
+        guestFavorite: utilService.getRandomGuestFavorite(),
         location: {
           country: "USA",
           city: "New York",
@@ -524,6 +540,7 @@ function _createHomes() {
           `/Airdnd/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`,
         ],
         rating: utilService.getRandomRating(),
+        guestFavorite: utilService.getRandomGuestFavorite(),
         location: {
           country: "USA",
           city: "New York",
@@ -550,6 +567,7 @@ function _createHomes() {
           `/Airdnd/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`,
         ],
         rating: utilService.getRandomRating(),
+        guestFavorite: utilService.getRandomGuestFavorite(),
         location: {
           country: "Israel",
           city: "Tel Aviv",
@@ -576,6 +594,7 @@ function _createHomes() {
           `/Airdnd/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`,
         ],
         rating: utilService.getRandomRating(),
+        guestFavorite: utilService.getRandomGuestFavorite(),
         location: {
           country: "Israel",
           city: "Tel Aviv",
@@ -602,6 +621,7 @@ function _createHomes() {
           `/Airdnd/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`,
         ],
         rating: utilService.getRandomRating(),
+        guestFavorite: utilService.getRandomGuestFavorite(),
         location: {
           country: "Israel",
           city: "Tel Aviv",
@@ -628,6 +648,7 @@ function _createHomes() {
           `/Airdnd/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`,
         ],
         rating: utilService.getRandomRating(),
+        guestFavorite: utilService.getRandomGuestFavorite(),
         location: {
           country: "Israel",
           city: "Tel Aviv",
@@ -654,6 +675,7 @@ function _createHomes() {
           `/Airdnd/img/${utilService.getRandomIntInclusive(1, 10)}.jpg`,
         ],
         rating: utilService.getRandomRating(),
+        guestFavorite: utilService.getRandomGuestFavorite(),
         location: {
           country: "Israel",
           city: "Tel Aviv",
