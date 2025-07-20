@@ -1,24 +1,22 @@
 import { useSelector } from "react-redux"
 import { useEffect, useState } from "react"
-import { loadHomes } from "../store/homes/homes.action.js"
-import { showSuccessMsg, showErrorMsg } from "../services/event-bus.service"
-import { getFormattedDateRange } from "../services/home/home.service"
-import { HomeList } from "../cmps/HomeList.jsx"
+
+import { loadHomes } from "../store/home/homes.action.js"
+import { showSuccessMsg, showErrorMsg } from "../services/event-bus.service.js"
+import { getFormattedDateRange } from "../services/home/home.service.js"
+import { HomesList } from "../cmps/HomesList.jsx"
 import arrow1 from "../../public/icons/arrow1.svg"
 import { Link } from "react-router-dom"
 const dateRange = getFormattedDateRange() // returns something like "Jul 15–17"
 
-export function MainPage() {
-  const homes = useSelector((storeState) => storeState.homeModule.homes)
+export function HomePage() {
   const filterBy = {} //will add later
 
   useEffect(() => {
     loadHomes(filterBy)
-      .then(homes => {
-        showSuccessMsg('Load homes successfully')
-      })
       .catch(err => {
-        showErrorMsg('Cannot load homes')
+        // showErrorMsg('Cannot load homes')
+        // redirect to error page or render error component
       })
   }, [])
 
@@ -37,7 +35,7 @@ export function MainPage() {
           Available for similar dates
           <img src={arrow1} alt="Arrow icon" className="arrow-icon" />
         </Link>
-        <HomeList />
+        <HomesList />
       </div>
 
       <div className="text-with-icon">
@@ -45,7 +43,7 @@ export function MainPage() {
           Stay in Aegina
           <img src={arrow1} alt="Arrow icon" className="arrow-icon" />
         </Link>
-        <HomeList />
+        <HomesList />
       </div>
 
       <div className="text-with-icon">
@@ -53,7 +51,7 @@ export function MainPage() {
           Popular homes in Lavreotiki
           <img src={arrow1} alt="Arrow icon" className="arrow-icon" />
         </Link>
-        <HomeList />
+        <HomesList />
       </div>
 
       <div className="text-with-icon">
@@ -61,7 +59,7 @@ export function MainPage() {
           Guests also checked out Glyfada
           <img src={arrow1} alt="Arrow icon" className="arrow-icon" />
         </Link>
-        <HomeList />
+        <HomesList />
       </div>
 
       <div className="text-with-icon">
@@ -69,7 +67,7 @@ export function MainPage() {
           Homes in Markopoulo Mesogaias
           <img src={arrow1} alt="Arrow icon" className="arrow-icon" />
         </Link>
-        <HomeList />
+        <HomesList />
       </div>
       <hr />
     </div>

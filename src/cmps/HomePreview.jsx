@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import { getFormattedDateRange } from "../services/home/home.service"
 import { FaStar } from 'react-icons/fa';
+import { useSelector } from "react-redux"
+
 
 export function HomePreview({ home }) {
     const dateRange = getFormattedDateRange() // returns something like "Jul 15–17"

@@ -1,9 +1,9 @@
 import { useSelector } from "react-redux"
 import { useEffect, useState } from "react"
-import { loadHomes } from "../store/home/home.action"
+import { loadHomes } from "../store/home/homes.action.js"
 import { showSuccessMsg, showErrorMsg } from "../services/event-bus.service"
 import { getFormattedDateRange } from "../services/home/home.service"
-import { HomeList } from "../cmps/HomeList.jsx"
+import { HomesList } from "./HomesList.jsx"
 import arrow1 from "../../public/icons/arrow1.svg"
 const dateRange = getFormattedDateRange() // returns something like "Jul 15–17"
 
