@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux"
 import { useEffect, useState } from "react"
 import { loadHomes } from "../store/homes/homes.action.js"
-import { getFormattedDateRange } from "../services/home/home.service.js"
+import { getFormattedDateRange } from "../services/home.service.js"
 import { HomesList } from "../cmps/HomesList.jsx"
 import { Link } from "react-router-dom"
 import { useFilterSearchParams } from "../customHooks/useFilterSearchParams"

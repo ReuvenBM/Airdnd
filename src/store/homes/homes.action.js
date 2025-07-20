@@ -1,4 +1,4 @@
-import { homeService } from "../../services/home/home.service"
+import { homeService } from "../../services/home.service"
 import { store } from "../store"
 import {
   ADD_HOME,

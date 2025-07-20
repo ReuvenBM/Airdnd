@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import { useSearchParams } from "react-router-dom"
 import { setFilterBy } from "../store/homes/homes.action"
-import { homeService } from "../services/home/home.service"
+import { homeService } from "../services/home.service"
 import { getExistingProperties } from "../services/util.service"
 
 
