@@ -43,3 +43,31 @@
     }
   }
 }
+
+.img-container {
+  position: relative;
+}
+
+.img-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.heart-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 20px !important;
+  height: 20px !important;
+  object-fit: contain;
+  z-index: 1;
+
+  /* Fill color of the heart itself */
+  fill: rgba(0, 0, 0, 0.5) !important;
+
+  /* White stroke around the heart */
+  stroke: #fff !important;
+  stroke-width: 2 !important;
+}
