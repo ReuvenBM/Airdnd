@@ -7,7 +7,6 @@ export const utilService = {
   loadFromStorage,
   getRandomRating,
   getRandomGuestFavorite,
-  getHeartIcon
 }
 
 function makeId(length = 6) {
