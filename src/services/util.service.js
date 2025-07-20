@@ -6,6 +6,7 @@ export const utilService = {
   saveToStorage,
   loadFromStorage,
   getRandomRating,
+  getExistingProperties,
 }
 
 function makeId(length = 6) {
@@ -103,4 +104,14 @@ function saveToStorage(key, value) {
 function loadFromStorage(key) {
   const data = localStorage.getItem(key)
   return data ? JSON.parse(data) : undefined
+}
+export function getExistingProperties(obj) {
+    const truthyObj = {}
+    for (const key in obj) {
+        const val = obj[key]
+        if (val || typeof val === 'boolean') {
+            truthyObj[key] = val
+        }
+    }
+    return truthyObj
 }
