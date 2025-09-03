@@ -5,6 +5,7 @@
         "username": "reuven321",
         "password": "***",
         "email": "reuven@gmail.com",
+        "phone": "0541234567",
         "imgUrl": "",
         "favorites": [],
         "searching_history": []
@@ -15,6 +16,7 @@
         "username": "daria123",
         "password": "***",
         "email": "daria@gmail.com",
+        "phone": "0547654321",
         "imgUrl": "",
         "favorites": [],
         "searching_history": []
@@ -25,6 +27,7 @@
         "username": "avi",
         "password": "***",
         "email": "avi@host.com",
+        "phone": "0549876543",
         "imgUrl": "",
         "favorites": [],
         "searching_history": []
