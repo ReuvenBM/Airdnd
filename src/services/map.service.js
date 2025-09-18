@@ -12,7 +12,9 @@ export const mapService = {
 }
 
 // TODO: Enter your API Key
+//const API_KEY = 'YOUR_GOOGLE_MAPS_API_KEY'
 const API_KEY = 'YOUR_GOOGLE_MAPS_API_KEY'
+
 var gMap
 var gMarker
 var gMarkers = []
